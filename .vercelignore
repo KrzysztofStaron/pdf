@@ -1,7 +1,1 @@
-# Ignore backend since it's not deployed on Vercel
-backend/
-
-# Optional: also ignore local stuff
-.vscode/
-*.log
-*.env
+/backend

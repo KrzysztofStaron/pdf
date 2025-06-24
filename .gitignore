@@ -14,6 +14,7 @@ backend/dist/
 .env.test.local
 .env.production.local
 
+
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -55,3 +56,4 @@ coverage/
 # Temporary folders
 tmp/
 temp/ 
+.vercel
