@@ -1,9 +1,17 @@
 import express from "express";
+import cors from "cors";
+
 import { User } from "@shared/types/user";
 
 const app = express();
 const port = 3001;
 
+// Middleware
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 app.use(express.json());
 
 app.get("/", (_req, res) => {

@@ -6,14 +6,23 @@
     "dev": "ts-node index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-node test.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "@types/cors": "^2.8.19",
+    "@types/multer": "^1.4.13",
+    "@types/pdf-parse": "^1.1.5",
+    "canvas": "^3.1.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "node-poppler": "^8.0.1",
+    "pdf-parse": "^1.1.1",
+    "pdfjs-dist": "^5.3.31"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",

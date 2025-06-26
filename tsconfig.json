@@ -4,9 +4,5 @@
     "paths": {
       "@shared/*": ["shared/*"]
     }
-  },
-  "references": [
-    { "path": "frontend", "composite": true },
-    { "path": "backend", "composite": true }
-  ]
+  }
 }

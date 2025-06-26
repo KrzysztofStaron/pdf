@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test PDF Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <h1>Generate Test PDF</h1>
+    <button onclick="generatePDF()">Generate Sample PDF</button>
+
+    <script>
+      function generatePDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Add title
+        doc.setFontSize(20);
+        doc.text("Sample PDF Document", 20, 20);
+
+        // Add form-like content
+        doc.setFontSize(12);
+        doc.text("Name: John Doe", 20, 40);
+        doc.text("Email: john.doe@example.com", 20, 50);
+        doc.text("Phone: (555) 123-4567", 20, 60);
+        doc.text("Address: 123 Main Street, City, State 12345", 20, 70);
+
+        // Add some paragraph text
+        doc.setFontSize(14);
+        doc.text("Description:", 20, 90);
+        doc.setFontSize(12);
+        const description =
+          "This is a sample PDF document created for testing the PDF editor. You can edit any text in this document when you switch to Edit Mode.";
+        const lines = doc.splitTextToSize(description, 170);
+        doc.text(lines, 20, 100);
+
+        // Add more fields
+        doc.text("Date: January 1, 2024", 20, 130);
+        doc.text("Status: Active", 20, 140);
+        doc.text("Category: Test Document", 20, 150);
+
+        // Save the PDF
+        doc.save("sample-editable.pdf");
+      }
+    </script>
+  </body>
+</html>
